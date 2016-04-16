@@ -2,6 +2,7 @@
 /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import NavigationBar from './NavigationBar.js';
 import DataEmblemRows from './DataEmblemRows.js';
 import { Grid, Row, Col, Clearfix } from 'react-bootstrap';
 
@@ -45,41 +46,44 @@ class DataEmblem extends React.Component {
 
   render() {
     return (
-      <Grid className="text-center">
-        <Row className="row bg-primary">
-          <Col xs={1}>
-            <label>Name</label>
-          </Col>
-          <Col xs={3}>
-            <label>Class</label>
-          </Col>
-          <Col xs={1}>
-            <label>HP</label>
-          </Col>
-          <Col xs={1}>
-            <label>STR</label>
-          </Col>
-          <Col xs={1}>
-            <label>MAG</label>
-          </Col>
-          <Col xs={1}>
-            <label>SKL</label>
-          </Col>
-          <Col xs={1}>
-            <label>SPD</label>
-          </Col>
-          <Col xs={1}>
-            <label>LCK</label>
-          </Col>
-          <Col xs={1}>
-            <label>DEF</label>
-          </Col>
-          <Col xs={1}>
-            <label>RES</label>
-          </Col>
-        </Row>
-        <DataEmblemRows char={this.state.char} class={this.state.class}/>
-      </Grid>
+      <div>
+        <NavigationBar />
+        <Grid className="text-center">
+          <Row className="row bg-primary">
+            <Col xs={1}>
+              <label>Name</label>
+            </Col>
+            <Col xs={3}>
+              <label>Class</label>
+            </Col>
+            <Col xs={1}>
+              <label>HP</label>
+            </Col>
+            <Col xs={1}>
+              <label>STR</label>
+            </Col>
+            <Col xs={1}>
+              <label>MAG</label>
+            </Col>
+            <Col xs={1}>
+              <label>SKL</label>
+            </Col>
+            <Col xs={1}>
+              <label>SPD</label>
+            </Col>
+            <Col xs={1}>
+              <label>LCK</label>
+            </Col>
+            <Col xs={1}>
+              <label>DEF</label>
+            </Col>
+            <Col xs={1}>
+              <label>RES</label>
+            </Col>
+          </Row>
+          <DataEmblemRows char={this.state.char} class={this.state.class}/>
+        </Grid>
+      </div>
     );
   }
 }
